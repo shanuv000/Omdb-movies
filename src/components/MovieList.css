@@ -1,0 +1,43 @@
+.movie-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movie-card {
+  width: 30%;
+  margin-bottom: 40px;
+  background-color: #f8f8f8;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+}
+
+.movie-info {
+  padding: 10px;
+}
+
+.movie-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.movie-year {
+  font-size: 1rem;
+  color: #666;
+}
