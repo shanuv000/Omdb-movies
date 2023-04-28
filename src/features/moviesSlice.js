@@ -29,12 +29,15 @@ const moviesSlice = createSlice({
 export const { getMoviesStart, getMoviesSuccess, getMoviesFailure } =
   moviesSlice.actions;
 
-export const fetchMovies = () => async (dispatch) => {
+export const fetchMovies = (searchTerm) => async (dispatch) => {
   dispatch(getMoviesStart());
   try {
     const response = await axios.get(
-      "https://www.omdbapi.com/?s=batman&apikey=aa50ad83"
+      `https://www.omdbapi.com/?s=${
+        searchTerm === undefined ? "flash" : searchTerm
+      }&apikey=aa50ad83`
     );
+
     dispatch(getMoviesSuccess(response.data.Search));
   } catch (error) {
     dispatch(getMoviesFailure(error.message));
