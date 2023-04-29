@@ -6,9 +6,9 @@ const Search = ({ setSearchTerm, handleSearch }) => {
 
   return (
     <>
-      <div className="row my-2 p-2">
+      <div className="input-group mb-4 px-2 sticky-top">
         <input
-          className="form-control  col-8"
+          className="form-control  col-11"
           type="text"
           placeholder="Search movies..."
           onChange={handleInputChange}
@@ -16,7 +16,7 @@ const Search = ({ setSearchTerm, handleSearch }) => {
         />
         <button
           type="button"
-          class="btn btn-success col-4"
+          className="btn btn-success col-1 "
           onClick={handleSearch}
         >
           Search

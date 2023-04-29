@@ -14,7 +14,7 @@ const MovieList = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="bg-transparent">Loading...</div>;
   }
 
   if (error) {
@@ -22,9 +22,9 @@ const MovieList = () => {
   }
 
   return (
-    <div className="movie-list-container ">
+    <div className="container  ">
       {/* <div className="container-fluid "> */}
-      <h1>Popular Movies</h1>
+      <h1 className="text-center text-danger">Popular Movies</h1>
       <Search setSearchTerm={setSearchTerm} handleSearch={handleSearch} />
       <div className="movie-list">
         {movies.map((movie) => (
@@ -34,7 +34,7 @@ const MovieList = () => {
               alt={`${movie.Title} poster`}
               className="movie-poster"
             />
-            <div className="movie-info">
+            <div className="movie-info ">
               <h2 className="movie-title">
                 {movie.Title} - {movie.Type}
               </h2>

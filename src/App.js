@@ -11,7 +11,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="App">
+    <div className="App bg-black text-dark">
       <MovieList />
     </div>
   );
