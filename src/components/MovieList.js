@@ -11,8 +11,7 @@ const MovieList = () => {
   const dispatch = useDispatch();
   const heightOfScreen = window.innerHeight;
   const widthOfScreen = window.innerWidth;
-  console.log("height", window.innerHeight);
-  console.log("width", window.innerWidth);
+
   const handleSearch = () => {
     dispatch(fetchMovies(searchTerm));
   };
@@ -27,6 +26,7 @@ const MovieList = () => {
         <div
           class="spinner-border text-danger position-absolute top-50 start-50"
           role="status"
+          style={{ width: "4rem", height: "4rem" }}
         >
           <span class="visually-hidden ">Loading...</span>
         </div>
