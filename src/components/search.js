@@ -8,7 +8,7 @@ const Search = ({ setSearchTerm, handleSearch }) => {
     <>
       <div className="row my-2 p-2">
         <input
-          className="form-control form-control-lg col-8"
+          className="form-control  col-8"
           type="text"
           placeholder="Search movies..."
           onChange={handleInputChange}

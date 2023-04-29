@@ -8,6 +8,7 @@ const MovieList = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
 
+  console.log("movies", movies);
   const handleSearch = () => {
     dispatch(fetchMovies(searchTerm));
   };

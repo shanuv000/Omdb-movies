@@ -34,13 +34,15 @@ export const fetchMovies = (searchTerm) => async (dispatch) => {
   try {
     const response = await axios.get(
       `https://www.omdbapi.com/?s=${
-        searchTerm === undefined ? "flash" : searchTerm
+        searchTerm === undefined ? "wonder woman" : searchTerm
       }&apikey=aa50ad83`
     );
+    console.log("Response data bool->  ", response);
 
     dispatch(getMoviesSuccess(response.data.Search));
   } catch (error) {
     dispatch(getMoviesFailure(error.message));
+    console.log(error);
   }
 };
 
