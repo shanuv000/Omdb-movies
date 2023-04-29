@@ -1,4 +1,6 @@
 import React from "react";
+import { Search as Seinn } from "react-bootstrap-icons";
+
 const Search = ({ setSearchTerm, handleSearch }) => {
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
@@ -16,10 +18,11 @@ const Search = ({ setSearchTerm, handleSearch }) => {
         />
         <button
           type="button"
-          className="btn btn-success col-sm-1 col-3 truncate"
+          className="btn btn-success col-sm-1 col-3 align-items-center"
           onClick={handleSearch}
         >
-          Search
+          <Seinn className="" />
+          <i class="bi-alarm"></i>
         </button>
       </div>
     </>
