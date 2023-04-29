@@ -9,8 +9,10 @@ const MovieList = () => {
   const { movies, loading, error } = useSelector((state) => state.movies);
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
-
-  console.log("movies", movies);
+  const heightOfScreen = window.innerHeight;
+  const widthOfScreen = window.innerWidth;
+  console.log("height", window.innerHeight);
+  console.log("width", window.innerWidth);
   const handleSearch = () => {
     dispatch(fetchMovies(searchTerm));
   };
@@ -18,8 +20,16 @@ const MovieList = () => {
   if (loading) {
     // return <div className="bg-transparent">Loading...</div>;
     return (
-      <div class="spinner-border text-warning float-end" role="status">
-        <span class="visually-hidden">Loading...</span>
+      <div
+        className="position-relative"
+        style={{ height: heightOfScreen - 20, width: widthOfScreen }}
+      >
+        <div
+          class="spinner-border text-danger position-absolute top-50 start-50"
+          role="status"
+        >
+          <span class="visually-hidden ">Loading...</span>
+        </div>
       </div>
     );
   }
@@ -43,7 +53,7 @@ const MovieList = () => {
             />
             <div className="movie-info ">
               <h2 className="movie-title">
-                {movie.Title} - {movie.Type === "movie" ? <Film /> : <Tv />}
+                {movie.Title} {movie.Type === "movie" ? <Film /> : <Tv />}
               </h2>
               <p className="movie-year">Released in {movie.Year}</p>
             </div>
