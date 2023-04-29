@@ -21,7 +21,7 @@ const MovieList = () => {
     return (
       <div
         className="position-relative"
-        style={{ height: heightOfScreen - 20, width: widthOfScreen }}
+        style={{ height: heightOfScreen, width: widthOfScreen }}
       >
         <div
           class="spinner-border text-danger position-absolute top-50 start-50"
