@@ -41,7 +41,13 @@ const MovieList = () => {
   return (
     <div className="container  ">
       {/* <div className="container-fluid "> */}
-      <h1 className="text-center text-danger">Popular Movies</h1>
+      <h1
+        className="text-center text-danger "
+        onClick={() => window.location.reload(true)}
+        style={{ cursor: "pointer" }}
+      >
+        Popular Movies
+      </h1>
       <Search setSearchTerm={setSearchTerm} handleSearch={handleSearch} />
       <div className="movie-list">
         {movies.map((movie) => (
