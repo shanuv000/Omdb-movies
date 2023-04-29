@@ -39,7 +39,7 @@ const MovieList = () => {
   }
 
   return (
-    <div className="container  ">
+    <div className=" container-fluid">
       {/* <div className="container-fluid "> */}
       <h1
         className="text-center text-danger "
