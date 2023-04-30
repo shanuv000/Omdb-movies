@@ -20,7 +20,7 @@ const MovieList = () => {
     // return <div className="bg-transparent">Loading...</div>;
     return (
       <div
-        className="position-relative"
+        className="position-relative bg-secondary"
         style={{ height: heightOfScreen, width: widthOfScreen }}
       >
         <div
